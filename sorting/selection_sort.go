@@ -1,5 +1,7 @@
 package main
 
+import "github.com/SimoneStefani/algorithms-go/utils"
+
 // For each i, this implementation puts the (i+1)st
 // smallest item in a[a]. The entries to the left of
 // position i are the i smallest items in the array
@@ -14,15 +16,8 @@ func SelectionSort(a []int) []int {
 			}
 		}
 
-		Swap(a, i, min)
+		helpers.SwapInSlice(a, i, min)
 	}
 
 	return a
-}
-
-// Swap elements at position i and j in an array
-func Swap(a []int, i, j int) {
-	k := a[i]
-	a[i] = a[j]
-	a[j] = k
 }
